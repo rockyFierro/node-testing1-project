@@ -47,8 +47,8 @@ function findLargestInteger(integers) {
   for (let i = 0; i < integers.length; i++) {
     numbers.push(integers[i].integer);
   }
-  
- return Math.max(...numbers);
+
+  return Math.max(...numbers);
 
 }
 
@@ -59,6 +59,8 @@ class Counter {
    */
   constructor(initialNumber) {
     // ✨ initialize whatever properties are needed
+    this.count = (initialNumber);
+
   }
 
   /**
@@ -75,6 +77,11 @@ class Counter {
    */
   countDown() {
     // ✨ implement
+    if (this.count > 0) {
+      return this.count--;
+    } else {
+      return this.count;
+    }
   }
 }
 
@@ -84,6 +91,13 @@ class Seasons {
    */
   constructor() {
     // ✨ initialize whatever properties are needed
+    this.seasons = [
+      'summer',
+      'fall',
+      'winter',
+      'spring',
+    ];
+    this.season = 0;
   }
 
   /**
@@ -99,6 +113,13 @@ class Seasons {
    * seasons.next() // returns "summer"
    */
   next() {
+    const currentSeason = this.seasons[this.season];
+    if (this.season === 3) {
+      this.season = 0;
+    } else {
+      this.season++;
+    }
+    return currentSeason;
     // ✨ implement
   }
 }
