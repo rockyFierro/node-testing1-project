@@ -8,7 +8,14 @@
  */
 function trimProperties(obj) {
   // ✨ implement
+  const res = {};
+  for (let prop in obj) {
+    res[prop] = obj[prop].trim();
+  }
+  return res;
 }
+
+
 
 /**
  * [Exercise 2] trimPropertiesMutation trims in place the properties of an object
@@ -20,6 +27,10 @@ function trimProperties(obj) {
  */
 function trimPropertiesMutation(obj) {
   // ✨ implement
+  for (let prop in obj) {
+    obj[prop] = obj[prop].trim();
+  }
+  return obj;
 }
 
 /**
@@ -31,7 +42,14 @@ function trimPropertiesMutation(obj) {
  * findLargestInteger([{ integer: 1 }, { integer: 3 }, { integer: 2 }]) // returns 3
  */
 function findLargestInteger(integers) {
-  // ✨ implement
+  // ✨ <implement>
+  const numbers = []
+  for (let i = 0; i < integers.length; i++) {
+    numbers.push(integers[i].integer);
+  }
+  
+ return Math.max(...numbers);
+
 }
 
 class Counter {

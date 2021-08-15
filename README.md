@@ -34,7 +34,7 @@ There are two possible ways to submit your project. Your instructor should have 
 - Run `index.js` with Nodemon executing `npm run dev`.
 - Run tests locally with Jest executing `npm test`.
 - You can add console.logs to `index.js` to manually test your code. (e.g. `console.log(car.drive(10));`).
-- The output of your log statements can be found in the terminal you run `npm run dev` in.
+- The output of your log statements can be found in the terminal you run `npm run dev` in. 
 
 #### Hot Tips
 
