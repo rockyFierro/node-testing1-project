@@ -116,17 +116,61 @@ describe('[Exercise 5] Seasons', () => {
 });
 
 describe('[Exercise 6] Car', () => {
-  // let focus
-  // beforeEach(() => {
-  //   focus = new utils.Car('focus', 20, 30) // each test must start with a fresh car
-  // })
-  // test('[15] driving the car returns the updated odometer', () => {})
-  // test('[16] driving the car uses gas', () => {})
-  // test('[17] refueling allows to keep driving', () => {})
-  // test('[18] adding fuel to a full tank has no effect', () => {})
-})
+  let focus;
+  beforeEach(() => {
+    focus = new utils.Car('focus', 20, 30); // each test must start with a fresh car
+  });
+
+  test('[15] driving the car returns the updated odometer', () => {
+    expect(focus.drive(100)).toBe(100);
+    expect(focus.drive(100)).toBe(200);
+    expect(focus.drive(100)).toBe(300);
+    expect(focus.drive(200)).toBe(500);
+  });
+
+  test('[16] driving the car uses gas',
+    () => {
+      focus.drive(600);
+      expect(focus.drive(100)).toBe(600);
+      expect(focus.drive(100)).toBe(600);
+      expect(focus.drive(100)).toBe(600);
+      expect(focus.drive(200)).toBe(600);
+      expect(focus.tank).toBe(0);
+   }
+  );
+
+  test('[17] refueling allows to keep driving',
+    () => {
+      focus.drive(600);
+      expect(focus.odometer).toBe(600);
+
+      focus.drive(10);
+      expect(focus.odometer).toBe(600);
+
+      focus.refuel(20);
+      focus.drive(600);
+      expect(focus.odometer).toBe(1200);
+    }
+  );
+
+  test('[18] adding fuel to a full tank has no effect',
+    () => {
+      focus.refuel(99); 
+      expect(focus.tank).toBe(20);
+    }
+  );
+
+});
 
 describe('[Exercise 7] isEvenNumberAsync', () => {
-  // test('[19] resolves true if passed an even number', () => {})
-  // test('[20] resolves false if passed an odd number', () => {})
-})
+  test('[19] resolves true if passed an even number',
+    () => {
+
+    }
+  );
+  test('[20] resolves false if passed an odd number',
+    () => {
+
+    }
+  );
+});
