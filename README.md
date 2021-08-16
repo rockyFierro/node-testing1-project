@@ -18,10 +18,10 @@ There are two possible ways to submit your project. Your instructor should have 
 
 #### Option B - Pull Request
 
-- [ ] Fork and clone the repository.
-- [ ] Implement your project in a `firstname-lastname` branch.
-- [ ] Create a pull request of `firstname-lastname` against your `main` branch.
-- [ ] Open the assignment in Canvas and submit your pull request.
+- [x] Fork and clone the repository.
+- [x] Implement your project in a `firstname-lastname` branch.
+- [x] Create a pull request of `firstname-lastname` against your `main` branch.
+- [x] Open the assignment in Canvas and submit your pull request.
 
 ### Task 2: Minimum Viable Product
 
@@ -34,7 +34,7 @@ There are two possible ways to submit your project. Your instructor should have 
 - Run `index.js` with Nodemon executing `npm run dev`.
 - Run tests locally with Jest executing `npm test`.
 - You can add console.logs to `index.js` to manually test your code. (e.g. `console.log(car.drive(10));`).
-- The output of your log statements can be found in the terminal you run `npm run dev` in.
+- The output of your log statements can be found in the terminal you run `npm run dev` in. 
 
 #### Hot Tips
 
